@@ -49,7 +49,32 @@ do {
     }
     
     
-} while ($i < $longueur);
+} while ($i < $longueur); 
+
+echo "<br><br><br>";
+
+// Programme 5: Utiliser la boucle for pour afficher les nombres de 1 jusqu'à 10
+echo "Programme 5: <br>";
+echo "Voici les nombres paires de 1 jusqu'à 10: <br>";
+for($i=2; $i<=10; $i += 2){
+    echo "$i<br>";
+}
+
+// Programme 6: Afficher la table de multiplication de 7: 1 à 10
+echo "Programme 6: <br>";
+for ($i=1; $i<=10; $i++){
+    echo "7 x $i = ".($i*7). "<br>";
+}
+
+
+// Programme 7: 
+
+echo "Programme 7: <br>";
+$mot1="informatique";
+for($i=strlen($mot1)-1; $i>=0; $i--){
+    echo "$mot1[$i]";
+}
+
 ?> 
 
 
