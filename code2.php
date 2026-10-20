@@ -38,3 +38,76 @@ for($i=0; $i<sizeof($fruits);$i++){
     echo "$fruits[$i]<br>";
 }
 ?>
+
+<?php 
+// 20/10/2026
+
+// Exercice2
+
+//1
+$fruits=["Pomme"=>"Rouge", "Banane"=>"Jaune","Orange"=>"Orange","Mangue"=>"Jaune","Ananas"=>"Marron"];
+$i=0;
+foreach($fruits as $f){
+    $i+=1;
+}
+echo "Le nombre total de fruits est: $i<br>";
+
+//2
+foreach($fruits as $cle=>$val){
+    echo "Fruit: $cle / Couleur: $val. <br>";
+}
+
+//3
+$fruits["Kiwi"]="Vert";
+echo "Les valeurs du nouveau tableau: <br>";
+foreach($fruits as $cle=>$val){
+    echo "Fruit: $cle / Couleur: $val. <br>";
+}
+
+//4
+$p_exist=array_key_exists("Pomme", $fruits);
+echo "$p_exist<br>";
+if($p_exist==1){
+    echo "Cet élèment existe. <br>";
+}else{
+    echo "Cet élèment n'existe pas. <br>";
+}
+
+//5 
+unset($fruits["Ananas"]);
+foreach($fruits as $cle=>$val){
+    echo "Fruit: $cle / Couleur: $val <br>";
+}
+
+//6
+$s=0;
+foreach($fruits as $cle=>$val){
+    if ($val=="Jaune"){
+        $s+=1;
+    }
+    
+}
+echo "Le nombre de fruits de couleur jaune: $s <br><br><br><br><br>";
+?>
+
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Les Fruits o dackhi</title>
+    </head>
+    <body>
+        
+        <table>
+            <tr>
+                <th>Fruits</th>
+                <th>Couleurs</th>
+            </tr>
+            <?php foreach($fruits as $cle=>$val): ?>
+                <tr>
+                    <td><?= htmlspecialchars($cle) ?></td>
+                    <td><?= htmlspecialchars($val) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </body>
+</HTML>
