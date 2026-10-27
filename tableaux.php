@@ -114,7 +114,7 @@ echo "Le nombre de fruits de couleur jaune: $s <br><br><br><br><br>";
 
 
 <?php 
-//Exercice5
+//Exercice4
 $personnes= array(
 'mdupond'=>array('prenom'=>'Martin', 'nom'=>'Dupond', 'age'=>25, 'ville'=>'Paris'),
 'jm'=>array('prenom'=>'Jean', 'nom'=>'Martin', 'age'=>20, 'ville'=>'Villetaneuse'),
