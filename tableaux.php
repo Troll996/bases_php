@@ -145,3 +145,40 @@ foreach($personnes as $cle=>$val){
     
 };      
 echo "</table>";
+
+<?php 
+// Exercice 5
+$clients= array(
+    "client 1"=> array("nom 1"=>"Lesfer", "ville 1"=>"Casablanca", "age 1"=>"35"),
+    "client 2"=> array("nom 2"=>"Karimi", "ville 2"=>"Rabat", "age 2"=>"47"),
+    "client 3"=> array("nom 3"=>"Nawi", "ville 3"=>"Tours", "age 3"=>"58")
+);
+
+function afficher($t): void{
+    echo"<table border=1>
+           <thead>
+
+             <th>Client</th>
+             <th>Nom</th>
+             <th>Ville</th>
+             <th>Age</th>
+           
+           </thead><br>";
+    foreach($t as $client=>$info){
+        echo"<tr>
+               <td>$client</td><br>";
+        foreach($info as $cle=>$val){
+            echo"<td>$val</td><br>";
+        }
+        echo"</tr><br>";      
+    }
+    echo"</table>";     
+};
+
+afficher($clients);
+
+// Ajouter un client
+$clients["client 7"]=["Nom"=>"Zerktouni", "ville"=>"Casablanca", "Age"=>24];
+
+// La fonction array_combine
+
