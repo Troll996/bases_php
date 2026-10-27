@@ -111,3 +111,37 @@ echo "Le nombre de fruits de couleur jaune: $s <br><br><br><br><br>";
         </table>
     </body>
 </HTML>
+
+
+<?php 
+//Exercice5
+$personnes= array(
+'mdupond'=>array('prenom'=>'Martin', 'nom'=>'Dupond', 'age'=>25, 'ville'=>'Paris'),
+'jm'=>array('prenom'=>'Jean', 'nom'=>'Martin', 'age'=>20, 'ville'=>'Villetaneuse'),
+'toto'=>array('prenom'=>'Tom', 'nom'=>'Tonge', 'age'=>18, 'ville'=>'Epinay'),
+'arn'=>array('prenom'=>'Arnaud', 'nom'=>'Dupond', 'age'=>33, 'ville'=>'Paris'),
+'email'=>array('prenom'=>'Emilie', 'nom'=>'Ailta', 'age'=>46, 'ville'=>'Villetaneuse'),
+'dask'=>array('prenom'=>'Damien', 'nom'=>'Askier', 'age'=>7, 'ville'=>'Villetaneuse')
+);
+
+echo '<table  border=1>
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Ville</th>
+            </tr>
+        </thead>
+      ';
+
+foreach($personnes as $cle=>$val){
+    echo "<tr><br>";
+    foreach($val as $cle1=>$val1){
+        echo"<td>$val1</td>";      
+             
+    }
+    echo "</tr><br>";
+    
+};      
+echo "</table>";
